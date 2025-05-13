@@ -418,6 +418,7 @@ fn main() -> Result<(), Box<dyn core::error::Error>> {
 
     if current_mode == 4 {
         println!("Device was already in mode 4");
+        dfu.reset()?;
         return Ok(());
     }
     println!("Updating device from mode {} to mode 4", current_mode);
